@@ -1,0 +1,39 @@
+Difficulty,Question,Answer
+,What is Java? / Why Java?,"A high-level OOP language with rich API libraries, widely used around the world, supported by Oracle. Write once run anywhere (WORA), static types, compiled language"
+,What is JRE / JDK / JVM?,"JVM - Java virtual machine. Runs compiled Java code
+JRE - Java runtime environment. Contains the JVM.
+JDK - Java developer kit. Has a compiler, debugger, etc. Contains JRE and JVM."
+,What is the root class from which every class extends?,The Object class
+,What are the implicit modifiers for interface variables?,public static final
+,What are the primitive data types in Java?,"boolean, byte, short, int, long, float, double, char"
+,What is the difference between method overloading and overriding?,"Method overriding - In a subclass when one declares an identical method from the superclass, this method overrides the one in the superclass.
+Method overloading - Within the same class when one declares more than method with the same name but different signature (parameters)."
+,Difference between extends and implements?,"Extends is for classes, implements is for implementing interfaces"
+,What are generics? What is the diamond operator (`<>`)?,A way of specifying a type within a data structure - they enforce type safety. `<>` operator lets you infer generic types from the LHS of assignment operation
+,What are enumerations (enums)?,A special Java type that defines a collection of constants
+,Why are strings immutable in java?,"Identical String literals are collected in the ""String pool"" in an effort to conserve memory. Reference variables will then point to the same String object instance. Changing the object's state in the String pool will make changes to all references to that String object. Instead, when a change to a String is made, the JVM makes a new String object, and the reference variable points to the new String in the String pool."
+,"What is the difference between `String`, `StringBuilder`, and `StringBuffer`?","Strings are immutable.  Both `StringBuilder` and `StringBuffer` are mutable.  Furthermore, `StringBuffer` is sychronized while `StringBuilder` is not."
+,What are annotations?,"A type of syntactic metadata added to the code, read by the compiler - use @ syntax"
+,Explain stack vs heap?,Heap is where objects are stored in memory. Stack is where local variable references are kept - a new stack is created for each method invocation
+,What is a POJO? What is a bean?,"POJO - plain old Java object. Any Java object that you create.
+Bean - a POJO that has private data members, public getters/setters, and overrides .hashcode, .equals, and .toString methods"
+,How can you force garbage collection in Java?,Garbage collection cannot be forced but only requested using `System.gc()`.
+,"What is the difference between `final`, `.finalize()`, and `finally`?","a. `final`: final keyword can be used for class, method and variables. A final class cannot be subclassed and it prevents other programmers from subclassing a secure class to invoke insecure methods. A final method can't be overridden. A final variable can't change from its initialized value.
+b. `finalize()`: finalize method is used just before an object is destroyed and called just prior to garbage collection.
+c. `finally`: finally, a key word used in exception handling, creates a block of code that will be executed after a `try/catch` block has completed and before the code following the `try/catch` block. The `finally` block will execute whether or not an exception is thrown. For example, if a method opens a file upon exit, then you will not want the code that closes the file to be bypassed by the exception-handling mechanism. This finally keyword is designed to address this contingency."
+,What is a Marker interface?,"A marker interface is an interface which has no methods at all. Example: `Serializable`, `Remote`, `Cloneable`. Generally, they are used to give additional information about the behavior of a class."
+,What are the access modifiers in Java? Explain them.,"public  - can be accessed from any package.
+private - only members of the same class can access.
+protected - can be accessed by classes inside the package and subclasses anywhere.
+default - no access by classes or subclasses outside the package"
+,What are the non-access modifiers in Java?,"static, final, abstract, default, synchronized, transient, volatile, native, strictfp"
+,What is the difference between static and final variables?,Static variable is a global variable shared by all the instances of objects and it has only single copy.  A final variable is a constant variable and it cannot be changed.
+,What are the default values for all data types in Java?,"Objects - null. int, short, byte, long, float, double - 0. boolean - false. char - 'u0000' (null character)"
+,What are the implicit modifiers for interface variables / methods?,methods - public abstract; variables - public static final
+,What is a wrapper class?,Wrapper class is a wrapper around a primitive data type. It represents primitive data types in their corresponding class instances e.g. a boolean data type can be represented as a Boolean class instance. All of the primitive wrapper classes in Java are immutable i.e. once assigned a value to a wrapper class instance cannot be changed further.
+,What is autoboxing / unboxing?,Auto-boxing is the automatic conversion of primitives to their wrapper classes by the compiler. Useful for adding primitives to collections
+,Is Java pass-by-value or pass-by-reference?,"Java is strictly pass by value. Even when object references are passed as arguments, it is the value of the reference that is passed"
+,What is synchronized keyword?,Only allowing one thread access to the method or variable at a time - enforces thread-safety
+,What is the difference between `==` and `.equals()`?,"`==` -  tests to see if two reference variables refer to the exact same instance of an object.
+`.equals()` - tests to see if the two objects being compared to each other are equivalent, but they need not be the exact same instance of the same object."
+,First line of constructor?,The compiler will insert `super()` as the first line - it cannot be used anywhere else in constructor except for the first line

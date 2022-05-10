@@ -1,0 +1,403 @@
+// Multiple choice: 30
+// T/F: 20
+// TOTAL: 50
+
+// GUID: 34815453-d610-4425-bdb3-115b5e029307
+::Java features::
+Which of the following is NOT a feature of the Java language? {
+  ~Strongly typed
+  ~Garbage collection
+  =Low-level language
+  ~Object-oriented
+  ~Platform-independent (write once, run anywhere)
+}
+
+// GUID: 1add19d9-c143-49f8-b5ca-739eac1ea362
+::Object class::
+Which of the following methods are in the Object class? {
+  ~compareTo
+  ~describe
+  ~run
+  =toString
+  ~copy
+}
+
+// GUID: d144e3c2-f9dd-4670-90aa-a294875595e8
+::Equals and Hash Code::
+If the .equals() method returns false, the hash code of the objects being compared MUST be different {FALSE # not necessarily true, but enforcing this will improve performance of data structures that use hashing}
+
+// GUID: 22dca4d2-27c6-4ff7-84e9-30830e921f18
+::Order of Initialization::
+Match the order of initialization {
+	=Static variables -> 1
+	=Instance variables -> 3
+	=Static initializers -> 2
+	=Instance initializers -> 4
+	=Constructors -> 5
+}
+
+// GUID: 611d9523-d6fc-4892-bd7d-23c6c918c3ce
+::Increment - post and pre::
+The following code:
+<pre>
+int x = 1;
+System.out.print(x++);
+System.out.print(++x);
+</pre>
+will print 2 3 {
+	FALSE # ++x increments and then references the variable, x++ references and then increments, so it will print 1 3 
+}
+
+// GUID: d886d5a4-af37-4be0-9fe2-c95704ed8dcc
+::Loops::
+The difference between a while and do-while loop is that a while loop is guaranteed to execute at least once {
+	FALSE # a while loop evaluates the loop condition before iterating, so if the condition is immediately false the loop will never iterate 
+}
+
+// GUID: 70d9ed28-be0f-45d9-b7de-c03b3ad60054
+::size of int::
+What is the size of an int variable? {
+=32 bits (4 bytes)
+~8 bits (1 byte)
+~16 bits (2 bytes)
+~64 bits (8 bytes)
+}
+
+// GUID: f9d35d94-40d9-4ed5-a159-ee151a9913a2
+::2D Array::
+What is the value of <code>num</code> in the following code?
+<pre>
+int[][] twoDimensionalArray \= \{ \{0, 1, 2\}, \{2, 4, 6\}, \{2, 1, 0\} \};
+int num \= twoDimensionalArray[1][2];
+</pre>
+{=6 ~2 ~4 ~1}
+
+// GUID: b8ba1701-7e2d-4749-8b51-5af02ac21644
+::Postfix operator::
+What is the output of the following code?
+<pre>
+int a = 4;
+System.out.println(a++);
+</pre>
+{=4 ~5}
+
+// GUID: b54a9cbe-24c8-40ae-ab0e-30cda7007471
+::Decimal default data type::
+What is the default type of variable used for decimals? {
+=double
+~float
+~int
+~real
+}
+
+// GUID: 7ef32bce-ae80-4720-9c8e-86eaf24e39d8
+::Primitives vs Reference Vars::
+What is the difference between a primitive and a reference variable? {
+=A primitive variable stores a value, a reference variable stores the memory address of an object
+~A primitive variable stores a value, a reference variable stores an object
+~A primitive variable stores the memory address of a value, a reference variable stores the memory address of an object
+~There is no difference
+}
+
+// GUID: 15d26e71-340a-4b70-867c-c088ad644782
+::Variable assignment syntax::
+What is the proper syntax for assigning a value to a variable? {
+=<code>int x \= 5;</code>
+~<code>int 5 \= x;</code>
+~<code>5 \= x int;</code>
+~<code>x \= 5 int;</code>
+}
+
+// GUID: a42689f8-6b59-454a-8021-e935a9b99ef3
+::Compiler purpose::
+What is the purpose of the Java compiler? {
+=To transform Java code into instructions usable by the JVM
+~To transform Java code into instructions usable by the operating system
+~To transform Java code into instructions usable by a web browser
+}
+
+// GUID: c48adc77-d31a-486e-814f-e9f4bb06d5dd
+::Compiler output::
+The output of the Java compiler is Assembly code {
+	FALSE # The compiler outputs Bytecode, instructions the JVM uses to produce Assembly
+}
+
+// GUID: 06c856b6-cbda-4081-82cb-8dac7cb95dc9
+::Java command line syntax::
+How do you compile Java code contained in the file <code>helloWorld.java</code> and then run it on the command line? {
+=<code>javac HelloWorld.java</code>, then <code>java HelloWorld</code>
+~<code>java HelloWorld.java</code>, then <code>javac HelloWorld</code>
+~<code>java HelloWorld</code>, then <code>javac HelloWorld.java</code>
+~<code>HelloWorld javac</code>, then <code>HelloWorld java</code>
+}
+
+// GUID: f232c5b0-cb49-4000-922c-ca5e1b8e0c64
+::Explain Java's String Pool::
+Java's String Pool...{
+	~Prevents the creation of multiple String objects with duplicate character sequences
+	=Prevents the creation of multiple String literals with duplicate character sequences
+	~Prevents the creation of multiple String objects containing the same words
+	~Prevents the creation of multiple String literals containing the same words
+}
+
+// GUID: 29181ec1-8b65-4d81-ae62-d283499f5c80
+::A constructor::
+A constructor{
+	=Can be overloaded
+	~Has a return type
+	~Does not have same name as class
+	~Does not have an access modifier
+}
+
+// GUID: d1b7d58f-0d86-4dfe-aecb-dbd3499a092d
+::Default Constructor::
+In what situation do you obtain a default constructor?{
+	=When the class has no other constructors
+	~When you define at least one constructor
+	~When you define at least one constructor with at least one parameter
+	~none of the above
+}
+
+// GUID: a003808c-9c38-49f0-b32c-14951e8ad1cf
+::How do you get the size of an array?::
+How do you get the size of an array named <code>myArray</code>?{
+	~myArray.size
+	=myArray.length
+	~myArray.size()
+	~myArray.length()
+}
+
+// GUID: e2b36872-7f93-4500-bc0f-74256c15d73b
+::Interfaces have::
+Interfaces have{
+	~%-50%Implicitly final methods
+	~%-50%Methods that must be explicitly declared as abstract by user
+	~%50%Implicitly final variables
+	~%50%Methods implicitly declared public abstract
+}
+
+// GUID: 7258289c-fb6a-4903-bddd-4b6668f1392b
+::The following is not true about Java::
+Which of the following is NOT true about Java{
+	~Java is object oriented
+	~Java is write once run anywhere
+	=Memory in Java is not allocated automatically
+	~Java programs cannot control thread scheduling.
+	~Java has an API to inspect and manipulate its own code at runtime.
+}
+
+// GUID: 6fd88a6d-0097-4033-9ebf-5bb01f232ae6
+::Both String and StringBuffer are mutable.::
+Both String and StringBuffer are mutable.{
+	FALSE # Strings are immutable
+}
+
+// GUID: cd2428bd-52f6-405b-9622-69a07258459d
+::Floats Testing::
+Which of the following is illegal?{
+	~int a \= 32;
+	=float b \= 32.33; # float b \= 32.33f; or float b \= 32.33F;
+	~double c \= 32.33D;
+	~long d \= 32L;
+}
+
+// GUID: 98754c5c-9c16-465d-bbc2-fb7a26327bdb
+::Garbage collection can be forced by::
+Garbage collection can be forced by{
+	~Using the <code>System.gc()</code> method
+	~Calling the <code>finalize()</code> method
+	=It can never be forced.
+	~None of the options
+}
+
+// GUID: fec6fb66-ab1d-458a-9bfe-01c636edcdb5
+::If a class defines a main method and a static block, the static block will execute first.::
+If a class defines a main method and a static block, the static block will execute first.{
+	TRUE # static blocks are run when the class file is first loaded by the JVM
+}
+
+// GUID: 2346d0e0-dbb4-42ac-b524-b78e686aec8f
+::If a final method is declared in a class.::
+If a final method is declared in a class.{
+	~It must be overriden in a child class
+	~It must be called in every constructor.
+	~It cannot be called from static methods
+    =It cannot be overridden in a child class
+}
+
+// GUID: 4953a15b-ab2b-42c6-b084-162d5be3d1a8
+::Short Circuit::
+Which of the following are Short-Circuit operators?{
+	~%-50%|
+	~%50%||
+	~%-50%&amp;
+	~%50%&amp;&amp;
+}
+
+// GUID: ea2a8945-f237-4252-b362-800ddfd94661
+::StringBuilder is::
+StringBuilder is{
+	~Default initial capacity is 16.
+	~Not thread-safe.
+	~Mutable.
+	=All of these.
+}
+
+// GUID: b97060f0-a54a-489f-8724-0d79642119dc
+::The changes to the instance variables of one object also have an effect on the i...::
+The changes to the instance variables of one object also have an effect on the instance variables of the other object.{
+	FALSE # static variables are shared across all objects, but instance variables are unique to each instance
+}
+
+// GUID: a33fb045-45f3-4859-a6fb-8382bec5d0fa
+::The finalize() method can be overridden.::
+The finalize() method can be overridden.{
+	TRUE # The finalize() method is not final
+}
+
+// GUID: bcc78033-631a-467e-9acb-28011920bca5
+::Which of the following is not a Wrapper Class::
+Which of the following is not a Wrapper Class{
+	~Boolean.
+	~Long.
+	~Double.
+	~Short.
+	=All of these are Wrapper classes.
+}
+
+// GUID: 56adb19c-f9b6-4933-b85b-bf9dfc9d38da
+::Which of these is not included in a JDK::
+Which of these is not included in a JDK {
+	~Compiler
+	~JRE
+	~Garbage Collector
+	=Linker
+	~Virtual Machine
+}
+
+// GUID: 78a4ce6b-e696-4fbc-9460-4ba2357dc39b
+::An enhanced for loop can be used to traverse a String.::
+An enhanced for loop can be used to traverse a String.{
+	FALSE # Enhanced for loops can only be used with arrays or iterables.
+}
+
+// GUID: 58f204f7-2ed6-4731-8b3e-b629400d9853
+::equals() compares values and \=\= compares memory references.::
+equals() compares values and \=\= compares memory references.{
+	FALSE # They perform exactly the same, unless a class provides an overridden version of the equals() method that actually compares by value (e.g.\: String).
+}
+
+// GUID: fad78e80-79e2-4083-ba2f-6811c161d529
+::If an Object gets casted, a copy of it gets created in the Heap.::
+If an Object gets casted, a copy of it gets created in the Heap.{
+	FALSE # This is why the IS-A rule is the most powerful kind of Polymorphism. If the object was a Student at the beginning, it will always be that no matter if is casted up or down. The count of objects when casting is always one.
+}
+
+// GUID: 7465cdd2-f6ac-4e33-87e9-c3e5f95df405
+::Java is pass-by-value or pass-by-reference depending on the type of the variable.::
+Java is pass-by-reference not pass-by-value.{
+	FALSE # Sometimes the value passed may be a reference, but this is not the same as classical pass-by-reference semantics
+}
+
+// GUID: b9af70f0-bec1-4cd9-bba9-b49552d78f51
+::The continue statement pulls the flow of control out of a looping block.::
+The continue statement pulls the flow of control out of a looping block.{
+	FALSE # the continue statement immediately triggers the end of the current iteration
+}
+
+// GUID: cc1e1591-a914-438c-b5c6-a45b268c6161
+::Access modifiers::
+Match the access modifiers with their definition {
+  =Public -> Can be accessed from anywhere in the program
+  =Private -> Can only be accessed within the same class
+  =Default -> Can only be accessed from within the same package
+  =Protected -> Can be accessed within the same package or through inheritance by subclasses
+}
+
+// GUID: cab25ddf-abbf-4e7d-8b20-ba9d9c27ab75
+::Variable references are stored in the Stack.::
+Variable references are stored in the Stack.{
+	TRUE # Yes, they are stored in the stack. This is where a garbage collector checks if an object is ready for garbage collection.
+}
+
+// GUID: 042c5cbe-971b-48ae-b437-af22d585e45c
+::Variable shadowing allows for access to variables values with the same name through inheritance.::
+Variable shadowing allows for access to variables values with the same name through inheritance.{
+	FALSE # Variable shadowing happens at runtime, and variables are not polymorphic in Java
+}
+
+// GUID: 4b0656f4-5fae-4279-8f4a-831b2daf3fd2
+::When a primitive value gets casted, a copy of it gets stored on the Heap.::
+When a primitive value gets cast, a copy of it gets stored on the Heap.{
+	FALSE # A copy gets created, but primitives are stored in the Stack.
+}
+
+// GUID: 52b437ae-bdbf-49f8-bd14-5caee23fca85
+::How would you do mutually exclusive conditionals?::
+How would you do mutually exclusive conditionals?{
+	~Multiple "if" statements
+	~Multiple "else" statements
+	~One "if" followed by multiple "else" statements
+	=One "if" followed by multiple "else if" statements.
+}
+
+// GUID: 954146d7-5c9c-43cc-80b6-ebb5691559d9
+::Varargs::
+What is the rule for using "varargs"?{
+	~It must be the only parameter in the method
+	=It must be the last parameter in the method
+	~It must be the first parameter in the method
+	~It cannot be the only parameter in the method
+}
+
+// GUID: 568fdf5b-6f5c-403e-b437-96de66eb12f9
+::What is autoboxing?::
+What is autoboxing?{
+	~Automatically converting primitive values between different types.
+	=Automatically converting primitives to objects.
+	~Automatically converting objects to primitives.
+	~None of these.
+}
+
+// GUID: e00ebad5-18b9-48b3-b7e7-1ac031c59bdc
+::What is the bare minimum required to run a Java application?::
+What is the bare minimum required to run a Java application?{
+	=JRE
+	~Eclipse
+	~JDK # we can run Java apps with a JRE, JDK is not required
+	~Weblogic
+}
+
+// GUID: 0f8190cb-343e-4456-8a31-49ea01bb7421
+::Variable scopes::
+Which of the following is NOT a variable scope in Java? {
+  ~Instance / object
+  ~Class / static
+  ~Method
+  ~Block
+  =Package
+}
+
+// GUID: 0b15f792-ab6b-450b-9053-28b2b123a143
+::Static variables::
+You should use static variables if you want all instances of objects to have access to it {
+	TRUE
+}
+
+// GUID: 4e7a486b-49fb-4f72-be7b-38ce2eb2485b
+::Can you assign a variable of a larger capacity to a smaller variable without casting?::
+You can assign a variable of a larger capacity to a smaller variable without casting.{
+	FALSE
+}
+
+// GUID: bad72dff-7358-4ec3-890a-fb99ff852868
+::Packages and FQCN::
+The following is a good example of a fully qualified class name: HelloWorld.revature.com {
+	FALSE # the convention is [domain.organization.subpackage.class] - so com.revature.HelloWorld would be correct
+}
+
+// GUID: 37fa182f-6ca8-4f03-8cc8-bb0b219e433f
+::Main method arguments::
+The main() method can be written to accept more arguments than a single String[] {
+	FALSE # if the main() method is not written exactly to spec, the JVM will not recognize it.
+}
